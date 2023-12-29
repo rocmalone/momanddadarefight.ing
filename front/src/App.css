@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.half {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+.left-half {
+  background-color: pink;
+}
+
+.right-half {
+  background-color: blue;
+}
+
+.user {
+  position: absolute;
+  top: 60%;
+  left: 50vw;
+  transform: translateX(-50%);
+  border: 2px dashed greenyellow;
+  width: 30%;
+  height: 20%;
+}
