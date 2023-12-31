@@ -38,4 +38,29 @@ body {
   border: 2px dashed greenyellow;
   width: 30%;
   height: 20%;
+  background-color: white;
+}
+
+.bar-container {
+  background-color: black;
+  height: 50vh;
+  width: 60px;
+  margin: 0px 30px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.anger-bar {
+  margin: 0 2px;
+  background-color: red;
+  height: 200px;
+  width: 100%;
+}
+
+/* chat component */
+.chat {
+  background-color: white;
+  color: black;
+  width: 34vw;
 }

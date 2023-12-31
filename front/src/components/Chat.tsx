@@ -7,10 +7,10 @@ type ChatProps = {
 
 const Chat = (props: ChatProps) => {
   return (
-    <div>
+    <div className="chat">
       {props.messages.map((msg, index) => {
         return (
-          <div>
+          <div key={index}>
             {msg.content}
             {index}
           </div>
