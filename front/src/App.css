@@ -64,3 +64,11 @@ body {
   color: black;
   width: 34vw;
 }
+
+.chat .message {
+  color: black;
+}
+
+.chat .kid-message {
+  color: green;
+}

@@ -15,7 +15,7 @@ export type postBody = {
 };
 
 export type postData = {
-  newOpenAiMsg: string;
+  newOpenAiMsg: any;
   responseFrom: msgOwner;
 };
 
