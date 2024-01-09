@@ -24,7 +24,6 @@ const Chat = (props: ChatProps) => {
         return (
           <div key={index} className={`message ${cssClass}`}>
             {msg.content}
-            {index}
           </div>
         );
       })}

@@ -26,11 +26,14 @@ const openai = new OpenAI({
 async function getAiResponse(postBody: postBody) {
   const previousOpenAiMessages: openAiRequestMessage[] =
     postBody.openAiMessages;
-  console.log(previousOpenAiMessages);
-  const testOpenAiMsg: openAiRequestMessage = {
-    role: "system",
-    content: "tell me about bananas in 20 words or less",
-  };
+  try {
+    helpers.log(
+      "Last Message //",
+      previousOpenAiMessages[previousOpenAiMessages.length - 3].content
+    );
+  } catch (e) {
+    helpers.error(e);
+  }
 
   const openAiResponse = await openai.chat.completions.create({
     //@ts-ignore
@@ -39,6 +42,7 @@ async function getAiResponse(postBody: postBody) {
   });
 
   const openAiResponseText = openAiResponse.choices[0].message.content;
+  helpers.log("AI Response ///", openAiResponseText);
   return openAiResponseText;
 }
 

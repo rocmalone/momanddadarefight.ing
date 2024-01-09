@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right, pink 50%, blue 50%);
 }
 
 #root {
@@ -10,24 +11,19 @@ body {
   padding: 0;
   display: flex;
   flex-direction: row;
-}
-
-.half {
-  flex: 1;
-  height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 24px;
 }
 
-.left-half {
-  background-color: pink;
-}
-
-.right-half {
-  background-color: blue;
+.main-container {
+  height: 60vh;
+  width: 60vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: 5px solid purple;
+  justify-content: center;
 }
 
 .user {
@@ -37,14 +33,18 @@ body {
   transform: translateX(-50%);
   border: 2px dashed greenyellow;
   width: 30%;
-  height: 20%;
+  height: 50px;
   background-color: white;
+  opacity: 1;
+}
+
+.user .next-button {
 }
 
 .bar-container {
   background-color: black;
-  height: 50vh;
-  width: 60px;
+  height: 100%;
+  min-width: 80px;
   margin: 0px 30px;
 
   display: flex;
@@ -63,6 +63,16 @@ body {
   background-color: white;
   color: black;
   width: 34vw;
+
+  max-height: 100%;
+  overflow-y: auto;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.message {
+  margin-top: 6px;
 }
 
 .chat .message {
@@ -71,4 +81,80 @@ body {
 
 .chat .kid-message {
   color: green;
+}
+
+.chat .dad-message {
+  color: blue;
+}
+
+.chat .mom-message {
+  color: red;
+}
+
+/* button-19 */
+.button-19 {
+  appearance: button;
+  background-color: #1899d6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1cb0f6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
 }
